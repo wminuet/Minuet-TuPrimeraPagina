@@ -7,9 +7,16 @@
 </head>
 <body>
     <nav>
-        <a href={% url "empleados" %}>Empleados</a>
+        <a href={% url "inicio" %}>Inicio</a>
         <a href={% url "crear_empleado" %}>Alta de empleado</a>
     </nav>
-    <h1>Bienvenido al sistema de gestión de RRHH</h1>
+    <h1>Listado de empleados</h1>
+    <ul>
+        {% for empleado in empleados %}
+            <li> {{empleado}}</li> 
+        {% endfor %}
+        
+    </ul>
+
 </body>
 </html>
